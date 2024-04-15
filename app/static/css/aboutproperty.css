@@ -1,0 +1,48 @@
+img {
+    width: 300px;
+    height: 100%;
+}
+
+.property-info {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.container{
+    display: flex;
+    margin-bottom: 10px;
+     
+    width: 1000px;
+    flex-direction: row;
+}
+
+.priceprop{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
+
+.pricetc p {
+    border-radius: 80px;
+}
+
+.price-btn{
+    background-color: rgb(148, 148, 255);
+    margin: 10px;
+    color: white;
+}
+
+.type-btn{
+    background-color: orange;
+    margin: 10px;
+}
+
+button {
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background-color: aquamarine;
+}

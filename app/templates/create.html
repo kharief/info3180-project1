@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+<h1>Add New Property</h1>
+
+<form method="POST" enctype="multipart/form-data" action="{{ url_for('create') }}">
+    {{ form.csrf_token }}
+
+    <p>     
+        <p><b>{{ form.title.label }}</b></p>
+    </p>
+    <p>{{ form.title(size=50)}}</p>
+    {% if form.title.errors %}
+        <ul class="errors">
+            {% for error in form.title.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <p>
+       <p><b>{{ form.description.label }}</b></p>
+    </p>
+    <p>{{ form.description(rows=6, cols=50)}}</p>
+    {% if form.description.errors %}
+        <ul class="errors">
+            {% for error in form.description.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <div class = "propertyatt2">
+    
+    <p>
+        <b>{{ form.numrooms.label }}</b>
+    </p>
+    <p>{{ form.numrooms(size=30) }}</p>
+    {% if form.numrooms.errors %}
+        <ul class="errors">
+            {% for error in form.numrooms.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <p>
+        <p><b>{{ form.numbathrooms.label }}</b></p>
+    </p>
+    <p>{{ form.numbathrooms(size=30)}}</p>
+    {% if form.numbathrooms.errors %}
+        <ul class="errors">
+            {% for error in form.numbathrooms.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <p>
+        <b>{{ form.price.label }}</b>
+    </p>
+    <p>{{ form.price(size=30)}}</p>
+    {% if form.price.errors %}
+        <ul class="errors">
+            {% for error in form.price.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <p>
+        <p><b>{{ form.propertytype.label }}</b></p>
+    </p>
+    <p>{{ form.propertytype}}</p>
+    {% if form.propertytype.errors %}
+        <ul class="errors">
+            {% for error in form.propertytype.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    </div>
+
+    <p>
+        <p><b>{{ form.location.label }}</b></p>
+    </p>
+    <p>{{ form.location(size=50)}}</p>
+    {% if form.location.errors %}
+        <ul class="errors">
+            {% for error in form.location.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <div class ="form-info">
+        <p>{{ form.propertypic.label }}</p>
+    </div>
+    <p>{{ form.propertypic(size=10) }}</p>   
+    {% if form.propertypic.errors %}
+        <ul class="errors">
+            {% for error in form.propertypic.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+
+    <p>
+        <input type="submit" value="Add Property" class="btn btn-primary btn-block">
+    </p>
+</form>
+
+
+{% endblock %}

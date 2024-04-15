@@ -1,0 +1,46 @@
+
+
+.pty-container2{
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    justify-content: space-between;
+    grid-gap: 30px;
+}
+
+img {
+    height: 220px;
+    width: 100%;
+}
+
+.each-card shadow{
+    margin: 10px;
+    height: fit-content;
+    padding: 10px;
+   
+}
+
+.property-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.price div {
+    margin: 5px;
+    border-radius: 80px;
+}
+
+.p-button{
+    height: 50px;
+    width: 100%;
+    padding-bottom: 5px;
+    background-color: #14b7a7;
+    border: #14b7a7;
+    color:white;
+    bottom: 10px;
+}
+
+

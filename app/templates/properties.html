@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/properties.css')}}">
+
+<div class="pty-container">
+
+   <p><h1 class="page-header">Properties</h1></p>
+   <br>
+
+   <div class="pty-container2">
+
+    {% for property in properties %}
+      
+            <div class="each-card shadow">
+                <div class="image">
+                    <img class="allimages" src="{{ url_for('get_images', filename=property.filename) }}" alt=" Property Image">
+                </div>
+                <p></p>
+                <div class="property-info">
+                    <div><h4>{{property.title}}</h4></div>
+                    <div class="text-muted">{{property.location}}</div>
+                    <div class="price">
+                        <div class="btn btn-success">{{property.price}}</div>
+                    </div>
+                </div>
+                <div class="pbutton">
+                    <a href="{{url_for('aboutproperty', propertyid=property.id)}}"><button class="p-button"><b>View Property</b></button></a>
+                </div>
+            </div>
+    
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}
